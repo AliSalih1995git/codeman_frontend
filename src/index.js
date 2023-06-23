@@ -9,15 +9,16 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <GoogleOAuthProvider clientId="process.env.REACT_APP_GOOGLE_CLIENT_ID">
-    <React.StrictMode>
+  <React.StrictMode>
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
       <ThemeProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
         <ToastContainer />
       </ThemeProvider>
-    </React.StrictMode>
-  </GoogleOAuthProvider>
+    </GoogleOAuthProvider>
+  </React.StrictMode>
 );
